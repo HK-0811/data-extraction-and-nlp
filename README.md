@@ -12,6 +12,7 @@ The objective of this assignment is to extract textual data articles from given 
 ### Tools and Libraries
 - Use Python programming for data extraction.
 - You can utilize BeautifulSoup, Selenium, Scrapy, or any other Python libraries for data crawling.
+- In this project BeautifulSoup is used
 
 ## Data Analysis
 
