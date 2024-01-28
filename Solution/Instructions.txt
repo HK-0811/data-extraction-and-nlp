@@ -1,0 +1,38 @@
+										DATA EXTRACTION
+
+1. First of all for data extraction I imported all the necessary librabries
+	-pandas (To read the excel file provided)
+	-BeautifulSoup (To read the URL in the excel file)
+
+2. After importing i wrote a function " extract_article_text" to extract text and article from any provided URL and in that to fetch title and the article text
+   i used BeautifulSoup and its find function which helps to navigate within a webpage on basis of tag and class.
+	- for Title tag = "h1" class = "entry-title"
+	- for article_text tag="div" class = "td-post-content tagdiv-type"
+
+3. Now I created a folder called extracted_articles to store all the text of corresponding webpages and after that a for loop to iterate over every URL 
+   in excel and use the " extract_article_text" to extract title and article from the webpages.
+
+4. After Running these in the folder i got all the text files corresponding to their URL_ID with title and text in it.
+    - But there were 12 webpages which can't be extracted because there were images present in the text part and class was also not the same.
+
+
+										DATA ANALYSIS
+
+1. Imported nltk library, used for language processing.
+
+2. Created list of stopwords from the stopwords folder provided.
+
+3. Created a dictionary containing all the variables and then created a positive and negative dictionary
+   from the MasterDictionary.
+
+4. Now a for loop to calculate every variable and append them to the Dictionary containing all variables to their correspondinng URL_ID
+   
+5. after running the for loop I trransformed the dictionary into a dataframe so it can be converted to a csv file.
+
+6. Now I had a csv file having all values with their respective URL_ID, Now i had to paste all those values in output file provided by you
+	-Firstly i opened the output file and created Sheet2 in which i pasted the values i got as a result
+	-As both the sheet had URL_ID as common, it can be used as a PRIMARY_KEY and with the help of INDEXf function of excel
+	 i was able to paste those values in front of their correspondinng URL_ID.
+
+
+NOTE:- THE CODE HAS ALL THE NECESSARY COMMENTS
